@@ -49,10 +49,6 @@ public class Car {
    private GasTank gasTank;
    private Engine engine;
 
-   public static void main(String... args) {
-
-   }
-
    public Car(String description, int maxFuel, Engine engine) {
       
       if(description.length() == 0) {
