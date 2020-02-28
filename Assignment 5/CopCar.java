@@ -34,7 +34,7 @@ public class CopCar extends Car {
         else if(super.getY() > height) {
             yDirection *= -1;
         }
-        super.drive(20, x * xDirection, y * yDirection);
+        super.drive(2, x * xDirection, y * yDirection);
 
         
     }  

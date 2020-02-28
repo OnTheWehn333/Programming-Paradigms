@@ -23,7 +23,7 @@ public class RobberCar extends Car {
     }
 
     public void updateState(int width, int height) {
-        super.drive(40, x, y);
+        super.drive(4, x, y);
         if(!hasEscaped()) {
             if(super.getX() < -60 || super.getX() > width) {
                 EscapedCount++;
@@ -37,11 +37,14 @@ public class RobberCar extends Car {
         }
     }
 
-    public int getHowManyEscaped() {
+    public static int getHowManyEscaped() {
         return EscapedCount;
     }
     public Boolean hasEscaped() {
         return hasEscaped;
+    }
+    public static int getHowManyAreCaputred() {
+        return CapturedCount;
     }
     public void captured() {
         if(!isCaptured()) {
@@ -53,7 +56,13 @@ public class RobberCar extends Car {
         }
     }
 
+
     public Boolean isCaptured() {
         return isCaptured;
+    }
+
+    public static void reset() {
+        CapturedCount = 0;
+        EscapedCount = 0;
     }
 }
